@@ -74,6 +74,7 @@ section {
   height: auto;
   object-fit: cover;
   max-height: 40vh;
+  border-radius: 10%;
 }
 .left-text > p {
   max-width: 40vw;
