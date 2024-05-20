@@ -1,0 +1,306 @@
+html {
+  font-family: "M PLUS 2", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  background-color: white;
+  color: rgb(1, 11, 20);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 95vw;
+  align-items: center;
+  gap: 20vh;
+}
+
+.ahiru {
+  border-radius: 10%; /* 大きく角丸 */
+}
+
+
+p {
+  word-break: keep-all;
+}
+.header {
+  background-color: rgb(251, 251, 252);
+  text-align: center;
+  width: 80vw;
+  margin: 10vh 10vw;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10vh;
+  width: 90vw;
+}
+
+.gaikann {
+  width: 150px;
+}
+
+.right-text {
+  width: 70vw;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+.right-text > img {
+  max-width: 25vw;
+  height: auto;
+  max-height: 40vh;
+  object-fit: cover;
+}
+.right-text > p {
+  max-width: 40vw;
+}
+
+.left-text {
+  width: 70vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-text > video {
+  max-width: 25vw;
+  height: auto;
+  object-fit: cover;
+  max-height: 40vh;
+}
+.left-text > p {
+  max-width: 40vw;
+}
+.float__img {
+  float: left;
+  width: 25%;
+  margin-right: 20px;
+}
+
+.float__video {
+  float: right;
+  width: 60%;
+  margin-right: 20px;
+}
+
+.map {
+  display: flex;
+  width: 90vw;
+  flex-direction: row;
+  justify-content: start;
+  gap: 10vw;
+}
+
+.google-map {
+  width: 50vw;
+}
+
+.access-map {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+
+
+
+.access-table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 700px;
+}
+.access-table th,
+.access-table td {
+  border-bottom: 2px solid #9df8e9;
+  padding: 1em;
+}
+.access-table th {
+  border-bottom: 2px solid #4d9bc1;
+  font-weight: bold;
+  text-align: center;
+  width: 30%;
+  min-width: 4em;
+}
+
+.route {
+    width: 16vw;
+    height: 4vh;
+    background-color: #91d7fa;
+	border: 1px solid #0528c4;
+	border-radius: 35px;
+}
+
+.route > a {
+    color: rgb(8, 8, 8);
+    text-decoration: none;
+}
+
+
+footer {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@media screen and (max-width: 425px) {
+  .left-text {
+    width: 90vw;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .left-text > video {
+    width: 90vw;
+    max-width: 90vw;
+    height: 20vh;
+    object-fit: cover;
+  }
+  .left-text > p {
+    max-width: 90vw;
+  }
+}
+
+@media screen {
+}
+
+
+
+
+
+
+
+.wrapper{
+  background-color: #e2d6c6;
+  width: 60%;
+}
+
+
+/*tabの形状*/
+.tab{
+  display: flex;
+  flex-wrap: wrap;
+}
+.tab li a{
+  display: block;
+  background:#dddddd;
+  margin:0 2px;
+  padding:10px 20px;
+}
+/*liにactiveクラスがついた時の形状*/
+.tab li.active a{
+  background:#ffffff;
+}
+
+
+/*エリアの表示非表示と形状*/
+.area {
+  display: none;/*はじめは非表示*/
+  opacity: 0;/*透過0*/
+  padding:50px 20px;
+  background-color: #e2d6c6;
+}
+
+.area li {
+  padding: 10px;
+  border-bottom: 1px solid #111111;
+}
+
+/*areaにis-activeというクラスがついた時の形状*/
+.area.is-active {
+    display: block;/*表示*/
+    animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes displayAnime{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+/* Loading背景画面設定　*/
+
+#splash {
+  /*fixedで全面に固定*/
+position: fixed;
+z-index: 999;
+width: 100%;
+height: 100%;
+background:white;
+text-align:center;
+color:#fff;
+}
+
+#splash img{
+  max-width: 40%;
+  max-height: 40vh;
+  width: auto;
+  height: auto;
+}
+/* Loadingバー中央配置　*/
+#splash_text {
+position: absolute;
+top: 50%;
+left: 50%;
+  z-index: 999;
+width: 100%;
+transform: translate(-50%, -50%);
+color: #fff;
+}
+
+/*IE11対策用バーの線の高さ※対応しなければ削除してください*/
+#splash_text svg{
+  height: 2px;
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+
+#container{
+  width:100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+a{
+  color: #333;
+}
+
+a:hover{
+   text-decoration: none;   
+}
+
+.twitgram {
+   display: flex;
+   justify-content: space-around;
+   gap: 10%;
+}
+
+.twitter-timeline {
+  width: 40%;
+  height: auto;
+}
+
+.instagram-media {
+   width: 40%;
+   height: auto;
+}
